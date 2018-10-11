@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/CsharpLibrary/v15
+/CsharpLibrary/bin/Debug
+/CsharpLibrary/obj/Debug
+/CsharpLibrary.Tests/bin/Debug
+/CsharpLibrary.Tests/obj/Debug
+/packages
