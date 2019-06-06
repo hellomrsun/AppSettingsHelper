@@ -50,10 +50,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppSettingsParserTests.cs" />
-    <Compile Include="EncodingExtensionTests.cs" />
+    <Compile Include="AppSettings\AppSettingsParserTests.cs" />
+    <Compile Include="AppSettings\AppSettingsRetrieverTests.cs" />
+    <Compile Include="Extensions\EncodingExtensionTests.cs" />
+    <Compile Include="Extensions\XmlExtensionTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="XmlExtensionTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

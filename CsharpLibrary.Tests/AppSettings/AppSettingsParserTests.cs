@@ -1,8 +1,9 @@
 ﻿using System;
+using CsharpLibrary.AppSettings;
 using FluentAssertions;
 using NUnit.Framework;
 
-namespace CsharpLibrary.Tests
+namespace CsharpLibrary.Tests.AppSettings
 {
     [TestFixture]
     public class AppSettingsParserTests

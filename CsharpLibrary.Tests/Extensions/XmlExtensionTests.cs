@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Xml.Serialization;
+using CsharpLibrary.Extensions;
 using FluentAssertions;
 using NUnit.Framework;
 
-namespace CsharpLibrary.Tests
+namespace CsharpLibrary.Tests.Extensions
 {
     [TestFixture]
     public class XmlExtensionTests

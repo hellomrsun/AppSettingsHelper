@@ -1,7 +1,8 @@
-﻿using FluentAssertions;
+﻿using CsharpLibrary.Extensions;
+using FluentAssertions;
 using NUnit.Framework;
 
-namespace CsharpLibrary.Tests
+namespace CsharpLibrary.Tests.Extensions
 {
     [TestFixture]
     public class EncodingExtensionTests

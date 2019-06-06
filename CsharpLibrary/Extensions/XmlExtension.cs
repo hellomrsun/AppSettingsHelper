@@ -2,7 +2,7 @@
 using System.IO;
 using System.Xml.Serialization;
 
-namespace CsharpLibrary
+namespace CsharpLibrary.Extensions
 {
     public static class XmlExtension
     {

@@ -2,13 +2,8 @@
 using System.Configuration;
 using System.Globalization;
 
-namespace CsharpLibrary
+namespace CsharpLibrary.AppSettings
 {
-    public interface IAppSettingsParser
-    {
-        T Get<T>(string key);
-    }
-
     public class AppSettingsParser : IAppSettingsParser
     {
         public T Get<T>(string key)
