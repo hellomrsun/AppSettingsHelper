@@ -11,7 +11,7 @@ namespace CsharpLibrary.Extensions
             {
                 return text;
             }
-
+            
             byte[] textAsBytes = Encoding.UTF8.GetBytes(text);
             return Convert.ToBase64String(textAsBytes);
         }

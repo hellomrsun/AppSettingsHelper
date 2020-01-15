@@ -8,3 +8,6 @@
 /CsharpLibrary.Tests/bin/Debug
 /CsharpLibrary.Tests/obj/Debug
 /packages
+/CsharpLibrary/obj/Release
+/CsharpLibrary.sln.cache
+/.vs/CsharpLibrary/v14/.suo
