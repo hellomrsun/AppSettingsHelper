@@ -22,5 +22,15 @@ namespace CsharpLibrary.Extensions
                 return writer.ToString();
             }
         }
+
+        public static T DeserializeFromObject<T>(string str)
+        {
+            using (var reader = new StringReader(str))
+            {
+                var serializer = new XmlSerializer(typeof(T));
+
+                return (T)serializer.Deserialize(reader);
+            }
+        }
     }
 }

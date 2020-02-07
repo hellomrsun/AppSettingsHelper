@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Xml;
 using System.Xml.Serialization;
 using CsharpLibrary.Extensions;
 using FluentAssertions;
@@ -18,7 +19,7 @@ namespace CsharpLibrary.Tests.Extensions
             {
                 Header = new DocumentHeader
                 {
-                    Name = "Dylan SUN Doc",
+                    Name = "Jiangong SUN's Doc",
                     Parameters = new List<string>
                     {
                         "Param 1",
@@ -52,6 +53,20 @@ namespace CsharpLibrary.Tests.Extensions
 
             //Assert
             result.Should().Contain("header.name.space.1");
+        }
+
+        [Test]
+        public void Should_XmlExtension_deserialize_string_to_object_ok()
+        {
+            //Arrange
+            var input =
+                "<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<Document xmlns:big=\"header.name.space.1\" xmlns:green=\"body.name.space.1\" xmlns=\"doc.name.space.1\">\r\n  <big:Header>\r\n    <big:Name>Jiangong SUN's Doc</big:Name>\r\n    <big:Parameters>\r\n      <big:Parameter>Param 1</big:Parameter>\r\n      <big:Parameter>Param 2</big:Parameter>\r\n    </big:Parameters>\r\n  </big:Header>\r\n  <green:Body>\r\n    <green:Id>10001</green:Id>\r\n    <green:Paragraphs>\r\n      <green:Paragraph>\r\n        <green:Title>Title 1</green:Title>\r\n        <green:Content>Content 1</green:Content>\r\n      </green:Paragraph>\r\n      <green:Paragraph>\r\n        <green:Title>Title 2</green:Title>\r\n        <green:Content>Content 2</green:Content>\r\n      </green:Paragraph>\r\n    </green:Paragraphs>\r\n  </green:Body>\r\n</Document>";
+
+            //Act
+            var result = XmlExtension.DeserializeFromObject<XmlDoc>(input);
+
+            //Assert
+            result.Header.Name.Should().Be("Jiangong SUN's Doc");
         }
     }
 
