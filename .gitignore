@@ -11,3 +11,5 @@
 /CsharpLibrary/obj/Release
 /CsharpLibrary.sln.cache
 /.vs/CsharpLibrary/v14/.suo
+/LogAdatper/bin/
+/LogAdatper/obj/
